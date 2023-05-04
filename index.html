@@ -1,36 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador</title>
-    <link rel="stylesheet" href="reset.css">
-</head>
-<body>
-    <header>
-        <img class="logo" src="imagenes/Logo.png" alt="logo alura">
-    </header>
-    <main>
-        <section>
-            <textarea class="input-area" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
-            <div>
-                <h6 class="informacion">Solo letras minusculas y sin acento</h6>
-            </div>
-            <div class="botones">
-                <button class="b-encriptar">Encriptar</button>
-                <button class="b-desencriptar">Desencriptar</button>
-            </div>
-        </section>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        
+        <!--Insertando la fuente-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+        
+        <title>Encriptador</title>
+    </head>
 
-        <section>
-            <textarea class="output-area" cols="20" rows="10" placeholder="Ingrese el texto aquí"></textarea>
-            <div>
-                <button class="b-copiar">Copiar</button>
-            </div>
-        </section>
+    <body>
+        <header>
+            <img class="logo" src="imagenes/Logo.png" alt="logo alura">
+        </header>
+        <main>
+            <section>
+                <textarea class="input-area" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+                
+                <div class="indicacion">
+                    <h6 class="informacion">Solo letras minusculas y sin acento</h6>
+                </div>
 
+                <div class="botones">
+                    <!--bi:boton input-->
+                    <button class="bi-encriptar" type="button" onclick="encriptar()">Encriptar</button>
+                    <button class="bi-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
+                </div>
 
-    </main>
-</body>
+            </section>
+
+            <section>
+                <textarea class="output-area" cols="20" rows="10"></textarea>
+
+                <div class="output-mensajes">
+                    <!--om1: output mensaje 1-->
+                    <h2 id="om1">Ningun mensaje fue encontrado</h2>
+                    <p id="om2">Ingrese el texto que desees encriptar o desencriptar</p>
+                </div>
+
+                <div>
+                    <!--bi:boton output-->
+                    <button class="bo-copiar" type="button" onclick="copiar()">Copiar</button>
+                </div>
+
+            </section>
+        </main>
+
+    </body>
+
+    <script src="index.js"></script>
+
 </html>
