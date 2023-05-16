@@ -17,41 +17,43 @@
     </head>
 
     <body>
-        <header>
-            <img class="logo" src="imagenes/Logo.png" alt="logo alura">
-        </header>
-        <main>
-            <section>
+        <div class="container">
+            <div  class="logo">
+                <img src="imagenes/Logo.png" alt="logo alura">
+            </div> 
+
+            <div class="encriptar">
                 <textarea class="input-area" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
-                
-                <div class="indicacion">
-                    <h6 class="informacion">Solo letras minusculas y sin acento</h6>
-                </div>
+            </div>
 
-                <div class="botones">
-                    <!--bi:boton input-->
-                    <button class="bi-encriptar" type="button" onclick="encriptar()">Encriptar</button>
-                    <button class="bi-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
-                </div>
+            <div class="indicacion">
+                <h6>&#9888 Solo letras minusculas y sin acento</h6>
+            </div>
 
-            </section>
+            <div class="botones">
+                <!--bi:boton input-->
+                <button class="bi-encriptar" type="button" onclick="encriptar()">Encriptar</button>
+                <button class="bi-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
+            </div>
 
-            <section>
+
+            <div class="encriptado" >
                 <textarea class="output-area" cols="20" rows="10"></textarea>
 
                 <div class="output-mensajes">
-                    <!--om1: output mensaje 1-->
-                    <h2 id="om1">Ningun mensaje fue encontrado</h2>
+                    <h2 id="om1">Ningún mensaje fue encontrado</h2>
                     <p id="om2">Ingrese el texto que desees encriptar o desencriptar</p>
                 </div>
-
-                <div>
-                    <!--bi:boton output-->
+                <img id="muneco" src="imagenes/Muñeco.png" alt="muneco">
+               
+                <!--<div>
+                    <!--bi:boton output
                     <button class="bo-copiar" type="button" onclick="copiar()">Copiar</button>
                 </div>
+                -->
 
-            </section>
-        </main>
+            </div>
+        </div>
 
     </body>
 
